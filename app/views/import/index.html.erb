@@ -1,0 +1,11 @@
+<h1>インポート</h1>
+
+<%= form_tag "", html: { method: :post } do |f| %>
+
+<p><%= file_field_tag "file" %></p>
+
+<footer>
+  <%= submit_tag "インポートする" %>
+</footer>
+
+<% end %>

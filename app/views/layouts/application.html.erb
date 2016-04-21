@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>InternSample</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<% if notice %>
+<aside id="notice">
+  <div class="wrap"><%= notice %></div>
+</aside>
+<script> setTimeout(function() { $('#notice').slideUp("fast"); }, 1500); </script>
+<% end %>
+
+<%= yield %>
+
+</body>
+</html>

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # 各市町村
   get "/tokushima/" => "tokushima#index"
   get "/naruto/" => "naruto#index"
+  get "/anan" => "anan#index"
 
   # CSVインポート
   get "/import/" => "import#index"

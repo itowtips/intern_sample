@@ -29,3 +29,4 @@ ehthumbs.db
 
 # Dotenv
 /.env
+/nbproject/private/

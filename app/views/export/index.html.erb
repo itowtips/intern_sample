@@ -1,0 +1,43 @@
+<%= javascript_include_tag "//maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDeOXCyjUZdgYlJ-0eUukcPAKkhtmzwQ6M " %>
+
+<script type="text/javascript">
+$(function(){
+
+  // キャンパスの要素を取得する
+  var canvas = $('#map-canvas').get(0);
+
+  // 中心の位置座標を指定する
+  var latlng = new google.maps.LatLng( 35.792621, 139.806513 );
+
+  // 地図のオプションを設定する
+  var mapOptions = {
+	  zoom: 6,				// ズーム値
+	  center: latlng		// 中心座標 [latlng]
+  };
+
+  // [canvas]に、[mapOptions]の内容の、地図のインスタンス([map])を作成する
+  var map = new google.maps.Map( canvas, mapOptions ) ;
+
+  var marker = new google.maps.Marker({
+    position: latlng,
+    map: map,
+    icon: "/assets/oronamin.jpg"
+  });
+
+});
+</script>
+
+<h1>エクスポート(仮)</h1>
+<div class="notice">css notice</div>
+
+<%= form_tag "", html: { method: :post } do |f| %>
+
+<p><%= file_field_tag "file" %></p>
+
+<footer>
+  <%= submit_tag "インポートする" %>
+</footer>
+
+<div id="map-canvas" style="width: 600px; height: 600px;">ここに地図が表示されます</div>
+
+<% end %>

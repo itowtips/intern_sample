@@ -17,3 +17,10 @@ class ExportController < ActionController::Base
     redirect_to({ action: "index" }, { notice: "インポートしました。" })
   end
 end
+
+class City
+  include Document
+
+  seqid :id
+  field :name, type: String
+end

@@ -7,7 +7,7 @@ class ExportController < ActionController::Base
 
   def update
     ## TODO: import csv
-      require File.expand_path('../models/city', __FILE__)
+    require File.expand_path('../models/city', __FILE__)
 
     item = City.new
     item.name = "example city"

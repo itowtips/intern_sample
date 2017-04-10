@@ -1,6 +1,4 @@
 class ExportController < ActionController::Base
-  include ActionView::Controllers::Models::City
-
   layout "application"
 
   def index
@@ -9,6 +7,7 @@ class ExportController < ActionController::Base
 
   def update
     ## TODO: import csv
+    require File.expand_path('../models/city', __FILE__)
 
     item = City.new
     item.new.name = "example city"
@@ -16,11 +15,4 @@ class ExportController < ActionController::Base
 
     redirect_to({ action: "index" }, { notice: "インポートしました。" })
   end
-end
-
-class City
-  include Document
-
-  seqid :id
-  field :name, type: String
 end

@@ -7,10 +7,10 @@ class ExportController < ActionController::Base
 
   def update
     ## TODO: import csv
-    require File.expand_path('../models/city', __FILE__)
+      require File.expand_path('../models/city', __FILE__)
 
     item = City.new
-    item.new.name = "example city"
+    item.name = "example city"
     item.save
 
     redirect_to({ action: "index" }, { notice: "インポートしました。" })

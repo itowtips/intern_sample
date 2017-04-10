@@ -1,5 +1,4 @@
-#module Fields::Sequencer
-module Sequencer
+module Fields::Sequencer
   extend ActiveSupport::Concern
 
   module ClassMethods

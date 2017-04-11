@@ -1,6 +1,4 @@
-// add your css
-
-#notice {
+.notice {
   display: table;
   position: fixed;
   top: 0px;

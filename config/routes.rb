@@ -6,11 +6,16 @@ Rails.application.routes.draw do
   root "top#index"
 
   # 各市町村
-  get "/tokushima/" => "tokushima#index"
-  get "/naruto/" => "naruto#index"
+  get "/tokushima" => "tokushima#index"
+  get "/naruto" => "naruto#index"
   get "/anan" => "anan#index"
 
   # CSVインポート
-  get "/import/" => "import#index"
-  post "/import/" => "import#update"
+  get "/import" => "import#index"
+  post "/import" => "import#update"
+  
+    # temp
+  get "/export" => "export#index"
+  post "/export" => "export#update"
+  
 end

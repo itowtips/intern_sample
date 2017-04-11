@@ -30,7 +30,7 @@ $(function(){
 <h1>エクスポート(仮)</h1>
 <div class="notice">css notice</div>
 
-<%= form_tag "", html: { method: :post , :multipart =>true} do |f| %>
+<%= form_tag "", html: { method: :post } , :multipart => true do |f| %>
 
 <p><%= file_field_tag :file %></p>
 
